@@ -19,7 +19,12 @@ const generateRefreshToken = (user) => {
   );
 };
 
+const getRefreshExpiry = () => {
+  return new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+};
+
 module.exports = {
   generateAccessToken,
   generateRefreshToken,
+  getRefreshExpiry,
 };
