@@ -684,13 +684,3 @@ Option 2: detect by server response
 - `getRefreshExpiry()` should be implemented in `src/utils/tokens.js` if not already present
 
 ---
-
-## Recommended next step
-
-If you want, the next step is to add a `README` section with example frontend code for:
-
-- storing the access token
-- calling protected APIs
-- calling `/refresh`
-- retrying a failed request after refresh
-- logging the user out
