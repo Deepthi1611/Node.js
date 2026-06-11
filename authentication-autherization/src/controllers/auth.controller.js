@@ -52,6 +52,7 @@ exports.login = async (req, res) => {
     },
   });
 
+  // Set refresh token in HTTP-only cookie and send it to the client.
   res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
     secure: false,
@@ -59,6 +60,7 @@ exports.login = async (req, res) => {
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
 
+  // Send access token in response body for client to use in Authorization header.
   res.json({ accessToken });
 };
 
